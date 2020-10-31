@@ -1,0 +1,30 @@
+{
+  "name": "english-house",
+  "version": "0.0.1",
+  "description": "Deskripsi Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "rayhantech#4999",
+  "dependencies": {
+    "discord-player": "^3.0.0-beta.1",
+    "discord.js": "^12.4.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
+    "ytdl-core": "^4.0.0"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/remix/cmd-handler"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
