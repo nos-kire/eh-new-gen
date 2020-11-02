@@ -26,17 +26,36 @@ client.on("message", async message => {
   
 });
 
+client.on("guildMemberUpdate", async (oldMember, newMember) => {
+
+    // Boost
+
+    if (!oldMember.premiumSince && newMember.premiumSince) {
+      
+      const embed = new Discord.MessageEmbed()
+      .setDescription(`**${newMember.user.tag}** just boosted the server! Thank you, mate!`)
+      .setTitle('Boost Log')
+      .setColor("BLACK")
+      .setTimestamp()
+
+        return client.channels.cache.get("665680031988842496").send(embed)
+
+    }
+
+})
+
 client.on("guildMemberAdd", member => {
 
 
 const meki = new Discord.MessageEmbed()
 .setTitle("Welcome!!")
 .setColor("BLACK")
+.setThumbnail(member.user.displayAvatarURL())
 .setImage("https://cdn.discordapp.com/attachments/765397858010267758/765434690437251083/EH_Logopink.gif")
 .setDescription(`Hey ${member.user}, Welcome To English House!\n\n・Check out <#769315817137373194>\n・Feel free to introduce yourself briefly at <#552724672710705152>\n・You can also assign a few roles by yourself at <#572928865417166898> to be able to enter the locked channels.\n・Our general chat is <#571065207384703002>\n\nFor further information, don't hesitate to ask questions to either **Hosts** or **Moderators** , you will be assisted shortly. Bless you~`)
 .setTimestamp()
 
-client.channels.cache.get('587018766173601794').send(meki)
+client.channels.cache.get('587018766173601794').send(`${member.user}`, meki)
 
   const embed = new Discord.MessageEmbed()
 .setTitle(`Welcome To English House`)
