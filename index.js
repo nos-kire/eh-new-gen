@@ -26,14 +26,14 @@ client.on("message", async message => {
   
 });
 
-client.on("guildMemberUpdate", async (oldMember, newMember) => {
+client.on("guildMemberUpdate", async (oldState, newState) => {
 
     // Boost
 
-    if (!oldMember.premiumSince && newMember.premiumSince) {
+    if (!oldState.premiumSince && newState.premiumSince) {
       
       const embed = new Discord.MessageEmbed()
-      .setDescription(`**${newMember.user.tag}** just boosted the server! Thank you, mate!`)
+      .setDescription(`**${newState.user.tag}** just boosted the server! Thank you, mate!`)
       .setTitle('Boost Log')
       .setColor("BLACK")
       .setTimestamp()
