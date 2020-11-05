@@ -38,29 +38,14 @@ module.exports = function (client) {
         ctx.fillText(textString3, 720, canvas.height / 2 + 20);
       }
       
-      var textString2 = `#${member.user.discriminator}`;
-      ctx.font = 'bold 40px Genta';
-      ctx.fillStyle = '#f2f2f2';
-      ctx.fillText(textString2, 730, canvas.height / 2 + 58);
-      
-      var textString4 = `Member #${member.guild.memberCount}`;
-      ctx.font = 'bold 60px Genta';
-      ctx.fillStyle = '#f2f2f2';
-      ctx.fillText(textString4, 750, canvas.height / 2 + 125);
-      
-      var textString4 = `${member.guild.name}`;
-      ctx.font = 'bold 60px Genta';
-      ctx.fillStyle = '#f2f2f2';
-      ctx.fillText(textString4, 700, canvas.height / 2 - 150);
+     
      
       ctx.beginPath();
       ctx.arc(315, canvas.height / 2, 250, 0, Math.PI * 2, true);//position of img
       ctx.closePath();
       ctx.clip();
  
-      const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ format: 'jpg' }));
-
-      ctx.drawImage(avatar, 65, canvas.height / 2 - 250, 500, 500);
+      
    
       const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
       
