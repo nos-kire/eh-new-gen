@@ -4,6 +4,9 @@ const config = require('./config.json')
 const client = new Discord.Client({fetchAllMembers:true})
 require('dotenv').config()
 
+const welcome = require("./welcome");
+welcome(client);
+
 client.on("ready", async () => {
   console.log(`${client.user.username} is ready`);
   client.user.setActivity("English House | @Takiya Genji", { type: "PLAYING" }); //UBAH PRESENCE/STATUS BOT DISINI
