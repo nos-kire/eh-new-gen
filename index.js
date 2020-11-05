@@ -53,7 +53,7 @@ client.on("guildMemberAdd", member => {
      
       const ctx = canvas.getContext('2d');
   
-      const background = await Canvas.loadImage(`./welcome.png`);
+      const background = await Canvas.loadImage('https://cdn.discordapp.com/attachments/762823411184697395/771980958579949588/EHBannerR_3.png');
       ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
       ctx.strokeStyle = '#f2f2f2';
       ctx.strokeRect(0, 0, canvas.width, canvas.height);
