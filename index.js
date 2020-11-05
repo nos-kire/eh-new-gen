@@ -1,11 +1,10 @@
 const Discord = require("discord.js");
-const Canvas = require("canvas");
+
 const config = require('./config.json')
 const client = new Discord.Client({fetchAllMembers:true})
 require('dotenv').config()
 
-const welcome = require("./welcome");
-welcome(client);
+
 
 client.on("ready", async () => {
   console.log(`${client.user.username} is ready`);
