@@ -38,7 +38,7 @@ client.on("guildMemberUpdate", async (oldState, newState) => {
       .setColor("BLACK")
       .setTimestamp()
 
-        return client.channels.cache.get("665680031988842496").send(embed)
+      client.channels.cache.get("665680031988842496").send(embed)
 
     }
 
