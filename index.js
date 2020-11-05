@@ -50,6 +50,19 @@ client.on("guildMemberUpdate", async (oldState, newState) => {
 
 client.on("guildMemberAdd", member => {
 
+  const welcomeembed = new Discord.MessageEmbed()
+        .setColor("BLACK")
+        .setTimestamp()
+        .setAuthor(member.guild.iconURL({ dynamic: true })
+        .setTitle("Welcome!!")
+        .setDescription(`Hey ${member.user}, Welcome To English House!\n\n・Check out <#769315817137373194>\n・Feel free to introduce yourself briefly at <#552724672710705152>\n・You can also assign a few roles by yourself at <#572928865417166898> to be able to enter the locked channels.\n・Our general chat is <#571065207384703002>\n\nFor further information, don't hesitate to ask questions to either **Hosts** or **Moderators** , you will be assisted shortly. Bless you~`)
+        .setImage("https://cdn.discordapp.com/attachments/762823411184697395/773845290935386112/77709.jpg")
+      
+      //channel-welcomenya
+      const channel = member.guild.channels.cache.find(ch => ch.id === "587018766173601794");
+      
+      channel.send(welcomeembed);
+      
 
   const embed = new Discord.MessageEmbed()
 .setTitle(`Welcome To English House`)
