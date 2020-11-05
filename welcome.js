@@ -24,12 +24,12 @@ module.exports = function (client) {
       ctx.strokeStyle = '#f2f2f2';
       ctx.strokeRect(0, 0, canvas.width, canvas.height);
     
-      var textString3 = `${member.user.username}`;
+      var textString3 = `"READ the EMBED MESSAGE."`;
     
       if (textString3.length >= 14) {
         ctx.font = 'bold 100px Genta';
         ctx.fillStyle = '#f2f2f2';
-        ctx.fillText(textString3, 720, canvas.height / 2 + 20);
+        ctx.fillText(textString3, 720, canvas.height / 10 + 20);
       }
     
       else {
