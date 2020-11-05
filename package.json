@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "rayhantech#4999",
+  "author": "iqooooo",
   "dependencies": {
     "discord-player": "^3.0.0-beta.1",
     "discord.js": "^12.4.1",
